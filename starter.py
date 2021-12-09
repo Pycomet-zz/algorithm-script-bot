@@ -32,7 +32,7 @@ def start(msg):
         """
 <b>Hello Folks, This is the GZIL Gainz Algorithm Bot</b>
 
-Initial Number of Tokens Being Staked? (Number Only)
+Initial Number of Tokens Being Staked? (E.g 1000000)
 
         """,
         parse_mode='HTML',
@@ -49,7 +49,7 @@ def add_initial_balance(msg):
     question = bot.send_message(
         msg.from_user.id,
         f"""
-How many years are you planning to stake for? (Just number)
+How many years are you planning to stake for? (E.g 5)
 
         """,
         parse_mode='HTML',
@@ -66,7 +66,7 @@ def add_stake_years(msg):
     question = bot.send_message(
         msg.from_user.id,
         f"""
-Current Price of the token(Prefilled)? 
+Current Price of the token(Prefilled)? (E.g 7890.07)
 
         """,
         parse_mode='HTML',
@@ -98,7 +98,7 @@ def add_prediction(msg):
     question = bot.send_message(
         msg.from_user.id,
         f"""
-Staking Node Commission? 
+Staking Node Commission? (E.g 0.45)
 
         """,
         parse_mode='HTML',
@@ -114,7 +114,7 @@ def add_stake_commision(msg):
     question = bot.send_message(
         msg.from_user.id,
         f"""
-Staking Fee? 
+Staking Fee? (E.g 0.16)
 
         """,
         parse_mode='HTML',
@@ -130,7 +130,7 @@ def add_stake_fee(msg):
     question = bot.send_message(
         msg.from_user.id,
         f"""
-Claim Fee? 
+Claim Fee? (E.g 0.16)
 
         """,
         parse_mode='HTML',
@@ -146,7 +146,7 @@ def add_claim_fee(msg):
     question = bot.send_message(
         msg.from_user.id,
         f"""
-Staking Fee Rate of Return? 
+Staking Fee Rate of Return?  (E.g 0.16)
 
         """,
         parse_mode='HTML',
