@@ -124,31 +124,3 @@ def process_algorithm(user_id, params):
         user_id, f"This is a {res}% increase in effective ROR year over year")
     send_response(
         user_id, "This means that with current token prices you would be ")
-    send_response(
-        user_id, "------------------------------------------------------------------")
-
-    res = Initial_Balance * (1 + ROR * Years)
-    message = f"Balance at the end of 5 years without using the calculator: {res}"
-    send_response(user_id, message)
-    send_response(
-        user_id, f"Balance at the end of 5 years with using the calculator: {MB}")
-
-    res = MB - Initial_Balance * (1 + Years * ROR)
-    send_response(
-        user_id, f"Profit from using the calculator over the 5 years: {res}")
-    send_response(
-        user_id, f"You should reinvest your roughly every: {Days[1]}")
-
-    res = ROR * (1 - Commission)
-    send_response(
-        user_id, f"Your yearly rate of return taking into consideration the staking node commission is: {res}")
-    res = (MB / Initial_Balance) * (1 / Years) - 1
-    send_response(
-        user_id, f"This means the new effective annualised rate of return is: {res}")
-    res = (New_ROR - ROR_simple) * 100
-    send_response(
-        user_id, f"This means your new effective annualised rate of return has increase by: {res}")
-    
-    res = New_ROR * 100
-    send_response(
-        user_id, f"Over the 5 years this leads to a bonus return on initial capital of: {res}")

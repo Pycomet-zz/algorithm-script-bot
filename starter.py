@@ -30,7 +30,7 @@ def start(msg):
     question = bot.send_message(
         msg.from_user.id,
         """
-<b>Hello Folks, This is the GZIL Gainz Algorithm Bot</b>
+<b>Welcome To Staked Token Compounding Reminder Bot</b>
 
 Initial Number of Tokens Being Staked? (E.g 1000000)
 
