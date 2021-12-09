@@ -1,4 +1,3 @@
-import os
 from config import *
 from starter import *
 
@@ -23,10 +22,11 @@ def webhook():
     return "Tele-Escrow Bot Active!", 200
 
 
-if DEBUG != True:
-    server.run(host="0.0.0.0", threaded=True, port=int(os.environ.get('PORT', 5000)))
-else:
-    bot.remove_webhook()
     
-    print("Bot polling!")
-    bot.polling(none_stop=True)
+# print("bot polling...")
+# bot.remove_webhook()
+# bot.polling(none_stop=True)
+
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+

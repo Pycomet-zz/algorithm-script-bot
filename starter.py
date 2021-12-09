@@ -1,6 +1,16 @@
-from config import *
 from actions import *
-from model import InputModel
+from dataclasses import dataclass
+
+@dataclass
+class InputModel:
+    balance: float
+    years: int
+    price: float
+    prediction: float
+    commission: float
+    stake_fee: float
+    claim_fee: float
+    ror: float
 
 input_params = InputModel(
     balance= 0.0,
@@ -16,12 +26,6 @@ input_params = InputModel(
 @bot.message_handler(commands=['start'])
 def start(msg):
     # import pdb; pdb.set_trace()
-    
-
-    bot.reply_to(
-        msg,
-        "zHi"
-    )
         
     question = bot.send_message(
         msg.from_user.id,
@@ -164,4 +168,4 @@ def add_ror(msg):
         parse_mode='HTML',
     )
 
-    process_algorithm(msg.from_usere.id, input_params)
+    process_algorithm(msg.from_user.id, input_params)
