@@ -15,7 +15,7 @@ import logging
 logging.basicConfig(
     format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
     level=logging.WARNING
-    )
+)
 
 TOKEN = os.getenv('TOKEN')
 
@@ -24,9 +24,8 @@ SERVER_URL = os.getenv("SERVER_URL")
 
 
 bot = telebot.TeleBot(TOKEN)
-server = Flask(__name__)
 
 
-import importdir
-importdir.do("handlers", globals())
+# import importdir
+# importdir.do("handlers", globals())
 

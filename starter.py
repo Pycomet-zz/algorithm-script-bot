@@ -13,14 +13,19 @@ input_params = InputModel(
     ror= 0.0
 )
 
-
-
-@bot.message_handler(commands=['agent'])
-def start_algorithm(msg):
+@bot.message_handler(commands=['start'])
+def start(msg):
+    # import pdb; pdb.set_trace()
     
-    bot.send_message(
+
+    bot.reply_to(
+        msg,
+        "zHi"
+    )
+        
+    question = bot.send_message(
         msg.from_user.id,
-        f"""
+        """
 <b>Hello Folks, This is the GZIL Gainz Algorithm Bot</b>
 
 Initial Number of Tokens Being Staked? (Number Only)

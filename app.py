@@ -1,5 +1,8 @@
-from config import *
 import os
+from config import *
+from starter import *
+
+server = Flask(__name__)
 
 def send_response(user_id, msg):
     bot.send_message(
@@ -13,12 +16,11 @@ def getMessage():
     return "!", 200
 
 
-@server.route("/")
+@server.route("/start")
 def webhook():
     bot.remove_webhook()
     bot.set_webhook(url=SERVER_URL + TOKEN)
     return "Tele-Escrow Bot Active!", 200
-
 
 
 if DEBUG != True:

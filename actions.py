@@ -1,5 +1,5 @@
 from config import *
-from app import *
+from app import send_response
 from model import InputModel
 
 def process_algorithm(user_id, params:InputModel):
