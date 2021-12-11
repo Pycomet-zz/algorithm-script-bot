@@ -5,6 +5,7 @@ import telebot
 import numpy as np
 from matplotlib import pyplot as plt
 from datetime import date
+import requests
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -19,8 +20,7 @@ logging.basicConfig(
 
 TOKEN = os.getenv('TOKEN')
 
-DEBUG = True
 SERVER_URL = os.getenv("SERVER_URL")
-
+API_KEY = os.getenv("API_KEY")
 
 bot = telebot.TeleBot(TOKEN)

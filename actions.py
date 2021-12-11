@@ -10,8 +10,7 @@ def process_algorithm(user_id, params):
     Investment_Lenght = Years*365
     N_Range = Investment_Lenght+1
     Price = params.price
-    Price_Predict = params.prediction
-    Commission = params.commission
+    Commission = 0
 
     for n in range(1, N_Range):
         Balance = Initial_Balance
